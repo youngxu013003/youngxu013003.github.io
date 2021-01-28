@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<link href="https://fanshare.hk/CC_upload/webfont/webfont.css" rel="stylesheet" type="text/css">
+<title></title>
+
+<link href="css/bluehighlight.css" rel="stylesheet" type="text/css">
+<link href="css/normalize.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/index.js"></script>
+<link href="js/prefixfree.min.js">
+	
+<script  src="js/swiper.min.js"></script>	
+<link rel="stylesheet" href="css/swiper.min.css">
+	
+	
+	
+<style>
+	html,body{
+		width:100vw;
+		overflow-x: hidden;
+	}
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.main-container{
+		background-color: #F6DBD0;
+		max-width: 768px;
+		margin:auto;
+	}
+	.title{
+		max-width: 720px;
+	}
+    .space_ma_family_fs{
+		width: 100%;
+		height: 20px;	
+	}
+	.gallery_block_ma_family_fs{
+		background:-webkit-linear-gradient(0deg,rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.2)100%);
+		height: auto;
+		display: flex;
+		align-items: center;
+		padding: 7% 0px;
+		position: relative;
+		overflow: hidden;
+	}
+	.icon_ma_family_fs{
+		width: 22%;
+		height: auto;
+		z-index: 1;
+		position: absolute;
+		left: 10%;
+	}
+	.icon_ma_family_fs-2{
+		width: 27%;
+		height: auto;
+		z-index: 1;
+		position: absolute;
+		left: 7.5%;
+	}
+	
+	.swiper_container_ma_family_fs{
+        width: 100%;
+		position:relative;
+		z-index: 2;
+		overflow:visible!important;
+		padding-left: 20%
+    }
+    .swiper_slider_ma_family_fs{
+        
+       
+		
+		position: relative;
+    }
+    .swiper-slide:nth-child(2n) {
+        width: 40%;
+    }
+    .swiper-slide:nth-child(3n) {
+        width: 20%;
+    }
+	.swiper_img_ma_family_fs{
+		border-radius: 5%; 
+		filter: drop-shadow(5px 7px 10px #CF937B);
+		box-shadow: 5px 7px 14px #CF937B;
+		overflow: hidden;
+		position: relative;
+		z-index: 4;
+	}
+	.sp_price_ma_family_fs{
+		width: 100%;
+		position: relative;
+		z-index: 5;
+		text-align: center;
+		margin-top: 5%;
+		font-size: 14px;
+		color: #282828;
+	}
+	.hkd_ma_family_fs{
+		width: 100%;
+		z-index: 5;
+		text-align: center;
+		margin-top: 4px;
+		font-size: 16px;
+		color: #282828;
+	}
+	.a_ma_family_fs{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		left: 0;
+		top: 0;
+		background-color: grey;
+		z-index: 4;
+	}
+</style>	
+	
+</head>
+
+<body>
+	<canvas class="snow" id="snow"></canvas>
+    <div class="main-container">
+    <div class="banner">
+	    <div class="title"><img src="images/Title.png" alt=""/></div>
+	    <img src="images/Xmas_Market_back.jpg" width="750" height="745" alt=""/>
+	</div>
+		
+    <div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs">
+			<img src="images/marbros_img.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs">
+					<div class="swiper_img_ma_family_fs"><img src="images/DA-C12466.jpg"></div>
+					<div class="sp_price_ma_family_fs">Christmas Special Price</div>
+					<div class="hkd_ma_family_fs">HKD 12,000</div>
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+                <div class="swiper-slide swiper_slider_ma_family_fs">
+					<img src="images/TM-00343.jpg">
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+                <div class="swiper-slide swiper_slider_ma_family_fs">
+					<img src="images/TM-00305, TM-00306.jpg">
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+				<div class="swiper-slide swiper_slider_ma_family_fs">
+					<img src="images/DA-C12466.jpg">
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+                <div class="swiper-slide swiper_slider_ma_family_fs">
+					<img src="images/TM-00343.jpg">
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+                <div class="swiper-slide swiper_slider_ma_family_fs">
+					<img src="images/TM-00305, TM-00306.jpg">
+				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
+				</div>
+            </div>
+        </div>
+	</div>
+	<div class="space_ma_family_fs">&nbsp;</div>
+		
+	<div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs">
+			<img src="images/FALCONER.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05244E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05307E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/RBH-39912B.jpg"></div>
+				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05244E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05307E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/RBH-39912B.jpg"></div>
+            </div>
+        </div>
+	</div>
+		
+	<div class="space_ma_family_fs">&nbsp;</div>
+		
+	<div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs-2">
+			<img src="images/Mabelle.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53485B.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53874E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
+				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53485B.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53874E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
+            </div>
+        </div>
+	</div>
+		
+	<div class="space_ma_family_fs">&nbsp;</div>
+		
+	<div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs-2">
+			<img src="images/MADIA.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53804P.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53844E.jpg"></div>
+				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53804P.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53844E.jpg"></div>
+            </div>
+        </div>
+	</div>
+		
+	<div class="space_ma_family_fs">&nbsp;</div>
+		
+	<div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs-2">
+			<img src="images/ASHOKA.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48760E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48761AQ51077A.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/L03568A.jpg"></div>
+				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48760E.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48761AQ51077A.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/L03568A.jpg"></div>
+            </div>
+        </div>
+	</div>
+		
+    <div class="space_ma_family_fs">&nbsp;</div>
+		
+	<div  class="gallery_block_ma_family_fs">
+		<div class="icon_ma_family_fs-2">
+			<img src="images/LEO.png" alt="#">
+		</div>
+		<div class="swiper-container swiper_container_ma_family_fs">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/N04373P.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S09916A.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S11737R.jpg"></div>
+				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/N04373P.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S09916A.jpg"></div>
+                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S11737R.jpg"></div>
+            </div>
+        </div>
+	</div>
+		
+	<div class="space_ma_family_fs">&nbsp;</div>
+	<div class="space_ma_family_fs">&nbsp;</div>
+	<div class="space_ma_family_fs">&nbsp;</div>
+</div>
+	  <script src="js/lodash.min.js"></script><script  src="js/snow.js"></script>
+</body>
+	
+	
+	
+	
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+		slidesPerView:3,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 20,
+		freeMode: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+        }
+    });
+    </script>	
+	
+	
+	
+	
+	
+</html>
