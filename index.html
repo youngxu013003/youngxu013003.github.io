@@ -6,282 +6,129 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-touch-fullscreen" content="yes" />
 <link href="https://fanshare.hk/CC_upload/webfont/webfont.css" rel="stylesheet" type="text/css">
-<title></title>
-
-<link href="css/bluehighlight.css" rel="stylesheet" type="text/css">
-<link href="css/normalize.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/index.js"></script>
-<link href="js/prefixfree.min.js">
-	
+<title>Portfolio</title>
+<script src="js/jquery-3.2.1.min.js"></script>	
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <script  src="js/swiper.min.js"></script>	
 <link rel="stylesheet" href="css/swiper.min.css">
 	
 	
 	
 <style>
+	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 	html,body{
 		width:100vw;
 		overflow-x: hidden;
+		background-image: url("images/bg.jpeg");
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+		font-family:"Noto Sans TC"!important;
+        font-style: normal;
+		font-weight: 400;
 	}
 	img{
 		display: block;
 		width: 100%;
 		height: 100%;
 	}
+	::selection{
+		color: white;
+		background:#45576A;
+	}
 	.main-container{
-		background-color: #F6DBD0;
+		width: 90%;
 		max-width: 768px;
 		margin:auto;
+		background-color: transparent;
 	}
-	.title{
-		max-width: 720px;
+	.top_portfolio{
+		padding: 30px 0px;
 	}
-    .space_ma_family_fs{
-		width: 100%;
-		height: 20px;	
+	.photo_portfolio{
+		width: 100px;
+		height: 100px;
+		background-color: #45576A;
+		border-radius: 100%;
+		margin: auto;
+		border: 4px solid rgba(255,255,255,0.2);
 	}
-	.gallery_block_ma_family_fs{
-		background:-webkit-linear-gradient(0deg,rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.2)100%);
-		height: auto;
-		display: flex;
-		align-items: center;
-		padding: 7% 0px;
-		position: relative;
-		overflow: hidden;
-	}
-	.icon_ma_family_fs{
-		width: 22%;
-		height: auto;
-		z-index: 1;
-		position: absolute;
-		left: 10%;
-	}
-	.icon_ma_family_fs-2{
-		width: 27%;
-		height: auto;
-		z-index: 1;
-		position: absolute;
-		left: 7.5%;
-	}
-	
-	.swiper_container_ma_family_fs{
-        width: 100%;
-		position:relative;
-		z-index: 2;
-		overflow:visible!important;
-		padding-left: 20%
-    }
-    .swiper_slider_ma_family_fs{
-        
-       
-		
-		position: relative;
-    }
-    .swiper-slide:nth-child(2n) {
-        width: 40%;
-    }
-    .swiper-slide:nth-child(3n) {
-        width: 20%;
-    }
-	.swiper_img_ma_family_fs{
-		border-radius: 5%; 
-		filter: drop-shadow(5px 7px 10px #CF937B);
-		box-shadow: 5px 7px 14px #CF937B;
-		overflow: hidden;
-		position: relative;
-		z-index: 4;
-	}
-	.sp_price_ma_family_fs{
-		width: 100%;
-		position: relative;
-		z-index: 5;
+	.name_portfolio{
 		text-align: center;
-		margin-top: 5%;
+		font-size: 32px;
+		letter-spacing: 0.04em;
+		color: #28313A;
+		line-height: 1.2em;
+		margin-top: 10px;
+	}
+	.job_title_portfolio{
+		text-align: center;
 		font-size: 14px;
-		color: #282828;
+		letter-spacing: 0.04em;
+		color: #45576A;
 	}
-	.hkd_ma_family_fs{
+	.menu_portfolio{
 		width: 100%;
-		z-index: 5;
-		text-align: center;
-		margin-top: 4px;
+		height: 54px;
+		background-color: #F7DE8F;
+		
+	}
+	.block_portfolio{
+		border-top: 2px solid #45576A;
+		background-color: rgba(255,255,255,0.6);
+		padding: 30px;
+	}
+	.text_1_portfolio{
+		font-size: 20px;
+		color: #28313A;
+		letter-spacing: 0.04em;
+		line-height: 1.4em;
+	}
+	.text_year_portfolio{
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		color: #EFCE67;
+	}
+	.text_2_portfolio{
 		font-size: 16px;
-		color: #282828;
-	}
-	.a_ma_family_fs{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		left: 0;
-		top: 0;
-		background-color: grey;
-		z-index: 4;
+		letter-spacing: 0.02em;
+		color: #45576A;
+		text-align: left;
 	}
 </style>	
 	
 </head>
 
 <body>
-	<canvas class="snow" id="snow"></canvas>
     <div class="main-container">
-    <div class="banner">
-	    <div class="title"><img src="images/Title.png" alt=""/></div>
-	    <img src="images/Xmas_Market_back.jpg" width="750" height="745" alt=""/>
-	</div>
 		
-    <div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs">
-			<img src="images/marbros_img.png" alt="#">
+		<div class="top_portfolio">
+		    <div class="photo_portfolio"></div>
+		    <div class="name_portfolio">JACK YIN</div>
+		    <div class="job_title_portfolio">Product Manager</div>
 		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs">
-					<div class="swiper_img_ma_family_fs"><img src="images/DA-C12466.jpg"></div>
-					<div class="sp_price_ma_family_fs">Christmas Special Price</div>
-					<div class="hkd_ma_family_fs">HKD 12,000</div>
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-                <div class="swiper-slide swiper_slider_ma_family_fs">
-					<img src="images/TM-00343.jpg">
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-                <div class="swiper-slide swiper_slider_ma_family_fs">
-					<img src="images/TM-00305, TM-00306.jpg">
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-				<div class="swiper-slide swiper_slider_ma_family_fs">
-					<img src="images/DA-C12466.jpg">
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-                <div class="swiper-slide swiper_slider_ma_family_fs">
-					<img src="images/TM-00343.jpg">
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-                <div class="swiper-slide swiper_slider_ma_family_fs">
-					<img src="images/TM-00305, TM-00306.jpg">
-				    <a class="a_ma_family_fs" href="https://fanshare.hk/">&nbsp;</a>
-				</div>
-            </div>
-        </div>
-	</div>
-	<div class="space_ma_family_fs">&nbsp;</div>
-		
-	<div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs">
-			<img src="images/FALCONER.png" alt="#">
+	    <div class="menu_portfolio">
+		    <div class="menu_option_portfolio">INTRODUCTION</div>
 		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05244E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05307E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/RBH-39912B.jpg"></div>
-				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05244E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/DRG-05307E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/RBH-39912B.jpg"></div>
-            </div>
-        </div>
-	</div>
-		
-	<div class="space_ma_family_fs">&nbsp;</div>
-		
-	<div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs-2">
-			<img src="images/Mabelle.png" alt="#">
+		<div class="block_portfolio">
+		    <div class="text_1_portfolio">EDUCATION</div>
+			<div class="text_year_portfolio">2010 - 2014</div>
+			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
+			<div class="text_2_portfolio">Wuhan University</div>
+			<div class="text_year_portfolio">2014 - 2016</div>
+			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
+			<div class="text_1_portfolio ">WORK EXPERIENCE</div>
+			<div class="text_year_portfolio">2016 - 2021</div>
+			<div class="text_2_portfolio">Huawei Limited</div>
+			<div class="text_1_portfolio">SKILLS</div>
 		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53485B.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53874E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
-				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53485B.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53874E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
-            </div>
-        </div>
-	</div>
-		
-	<div class="space_ma_family_fs">&nbsp;</div>
-		
-	<div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs-2">
-			<img src="images/MADIA.png" alt="#">
-		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53804P.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53844E.jpg"></div>
-				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53862E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53804P.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q53844E.jpg"></div>
-            </div>
-        </div>
-	</div>
-		
-	<div class="space_ma_family_fs">&nbsp;</div>
-		
-	<div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs-2">
-			<img src="images/ASHOKA.png" alt="#">
-		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48760E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48761AQ51077A.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/L03568A.jpg"></div>
-				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48760E.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/Q48761AQ51077A.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/L03568A.jpg"></div>
-            </div>
-        </div>
-	</div>
-		
-    <div class="space_ma_family_fs">&nbsp;</div>
-		
-	<div  class="gallery_block_ma_family_fs">
-		<div class="icon_ma_family_fs-2">
-			<img src="images/LEO.png" alt="#">
-		</div>
-		<div class="swiper-container swiper_container_ma_family_fs">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/N04373P.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S09916A.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S11737R.jpg"></div>
-				<div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/N04373P.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S09916A.jpg"></div>
-                <div class="swiper-slide swiper_slider_ma_family_fs"><img src="images/S11737R.jpg"></div>
-            </div>
-        </div>
-	</div>
-		
-	<div class="space_ma_family_fs">&nbsp;</div>
-	<div class="space_ma_family_fs">&nbsp;</div>
-	<div class="space_ma_family_fs">&nbsp;</div>
-</div>
-	  <script src="js/lodash.min.js"></script><script  src="js/snow.js"></script>
+	</div>	
 </body>
 	
 	
 	
-	
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-		slidesPerView:3,
-        centeredSlides: true,
-        paginationClickable: true,
-        spaceBetween: 20,
-		freeMode: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-        }
-    });
-    </script>	
+
 	
 	
 	
