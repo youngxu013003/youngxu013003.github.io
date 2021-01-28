@@ -16,7 +16,7 @@
 	
 	
 <style>
-	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);*/
 	html,body{
 		width:100vw;
 		overflow-x: hidden;
@@ -24,7 +24,7 @@
 		background-size: cover;
 		background-position: top;
 		background-repeat: no-repeat;
-		font-family:"Noto Sans TC"!important;
+		font-family:Arial, Helvetica, sans-serif;
         font-style: normal;
 		font-weight: 400;
 	}
@@ -72,12 +72,25 @@
 		width: 100%;
 		height: 54px;
 		background-color: #F7DE8F;
-		
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+	.menu_option_portfolio{
+		width: 100%;
+		text-align: center;
+		height: 54px;
+		line-height: 52px;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		color: #28313A;
+		white-space: nowrap;
 	}
 	.block_portfolio{
 		border-top: 2px solid #45576A;
-		background-color: rgba(255,255,255,0.6);
+		background-color: rgba(255,255,255,0.8);
 		padding: 30px;
+		margin:20px 0px;
 	}
 	.text_1_portfolio{
 		font-size: 20px;
@@ -109,7 +122,9 @@
 		    <div class="job_title_portfolio">Product Manager</div>
 		</div>
 	    <div class="menu_portfolio">
-		    <div class="menu_option_portfolio">INTRODUCTION</div>
+		    <div class="menu_option_portfolio">ABOUT</div>
+			<div class="menu_option_portfolio">PORTFOLIO</div>
+			<div class="menu_option_portfolio">CONTACTS</div>
 		</div>
 		<div class="block_portfolio">
 		    <div class="text_1_portfolio">EDUCATION</div>
@@ -122,6 +137,14 @@
 			<div class="text_year_portfolio">2016 - 2021</div>
 			<div class="text_2_portfolio">Huawei Limited</div>
 			<div class="text_1_portfolio">SKILLS</div>
+		</div>
+		<div class="block_portfolio">
+		    <div class="text_1_portfolio">WEB DESIGN</div>
+			
+		</div>
+		<div class="block_portfolio">
+		    1
+			
 		</div>
 	</div>	
 </body>
