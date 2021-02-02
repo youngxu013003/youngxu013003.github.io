@@ -19,7 +19,7 @@
 	/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);*/
 	html,body{
 		width:100vw;
-		overflow-x: hidden;
+		height:auto;
 		background-image: url("images/bg.jpeg");
 		background-size: cover;
 		background-position: top;
@@ -42,9 +42,15 @@
 		max-width: 768px;
 		margin:auto;
 		background-color: transparent;
+		position:relative;
 	}
 	.top_portfolio{
 		padding: 30px 0px;
+		transform-origin: top center;
+	}
+	.photo_scroll_portfolio{
+		width: 80px!important;
+		height: 80px!important;
 	}
 	.photo_portfolio{
 		width: 100px;
@@ -53,6 +59,7 @@
 		border-radius: 100%;
 		margin: auto;
 		border: 4px solid rgba(255,255,255,0.2);
+		transition: 0.5s;
 	}
 	.name_portfolio{
 		text-align: center;
@@ -61,6 +68,7 @@
 		color: #28313A;
 		line-height: 1.2em;
 		margin-top: 10px;
+		font-weight: 500;
 	}
 	.job_title_portfolio{
 		text-align: center;
@@ -71,10 +79,14 @@
 	.menu_portfolio{
 		width: 100%;
 		height: 54px;
-		background-color: #F7DE8F;
+		background-color: #28313A;
 		display: flex;
 		justify-content: space-between;
 		align-content: center;
+		position: -webkit-sticky;
+        position: sticky;
+		top:-1px;
+		z-index: 2;
 	}
 	.menu_option_portfolio{
 		width: 100%;
@@ -83,8 +95,16 @@
 		line-height: 52px;
 		font-size: 16px;
 		letter-spacing: 0.02em;
-		color: #28313A;
+		color:white;
 		white-space: nowrap;
+		cursor: pointer;
+	}
+	.menu_option_portfolio:hover{
+		background-color:#45576A; 
+	}
+	.menu_option_active_portfolio{
+		color: white !important;
+		background-color:#45576A !important;
 	}
 	.block_portfolio{
 		border-top: 2px solid #45576A;
@@ -97,6 +117,7 @@
 		color: #28313A;
 		letter-spacing: 0.04em;
 		line-height: 1.4em;
+		font-weight: 500;
 	}
 	.text_year_portfolio{
 		font-size: 14px;
@@ -108,6 +129,79 @@
 		letter-spacing: 0.02em;
 		color: #45576A;
 		text-align: left;
+	}
+	.icon_protfolio{
+		width: 58px;
+		height: 58px;
+		margin-right: 10px;
+	}
+	
+	
+	.swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	.swiper_slider_3{
+		width: 40%;
+	}
+	.swiper_pagination_3{
+		position: relative!important;
+		bottom: 0px!important;
+		margin-top: 8px!important;
+	}
+	.swiper_pagination_3 .swiper-pagination-bullet-active, .swiper_pagination_2 .swiper-pagination-bullet-active{
+		background: #45576A!important;
+	}
+	.title_block_portfolio{
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+	}
+	.title_line_portfolio{
+		width:100%;
+		flex-grow: 1;
+		height: 1px;
+		background-color:#45576A;
+		opacity: 0.2;
+		margin-top: 18px;
+	}
+	.title_portfolio{
+		font-size: 24px;
+		color: #45576A;
+		margin-right: 10px;
+		letter-spacing: 0.02em;
+	}
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+		background-image: url("images/swiper_left.png")!important;
+		background-size: contain!important;
+	}
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+		background-image: url("images/swiper_right.png")!important;
+		background-size: contain!important;
+	}
+	@media(max-width:576px){
+		.menu_option_portfolio{
+			font-size: 14px;
+		}
 	}
 </style>	
 	
@@ -124,37 +218,155 @@
 	    <div class="menu_portfolio">
 		    <div class="menu_option_portfolio">ABOUT</div>
 			<div class="menu_option_portfolio">PORTFOLIO</div>
-			<div class="menu_option_portfolio">CONTACTS</div>
+			<div class="menu_option_portfolio">CONTACT</div>
 		</div>
 		<div class="block_portfolio">
+			<div class="title_block_portfolio">
+			    <div class="title_portfolio">ABOUT</div>
+				<div class="title_line_portfolio"></div>
+			</div>
+			<div style="height:25px"></div>
 		    <div class="text_1_portfolio">EDUCATION</div>
+			<div style="height:8px"></div>
 			<div class="text_year_portfolio">2010 - 2014</div>
 			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
 			<div class="text_2_portfolio">Wuhan University</div>
 			<div class="text_year_portfolio">2014 - 2016</div>
 			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
+			<div style="height: 25px"></div>
 			<div class="text_1_portfolio ">WORK EXPERIENCE</div>
+			<div style="height:8px"></div>
 			<div class="text_year_portfolio">2016 - 2021</div>
 			<div class="text_2_portfolio">Huawei Limited</div>
+			<div style="height:25px"></div>
 			<div class="text_1_portfolio">SKILLS</div>
 		</div>
 		<div class="block_portfolio">
-		    <div class="text_1_portfolio">WEB DESIGN</div>
+			<div class="title_block_portfolio">
+			    <div class="title_portfolio">PORTFOLIO</div>
+				<div class="title_line_portfolio"></div>
+			</div>
+			<div style="height:25px"></div>
+		    <div class="text_1_portfolio">UI/UX DESIGN</div>
 			
+			<div class="text_1_portfolio">GRAPHIC DESIGN</div>
+			<div class="swiper-container mt-2 swiper_2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+						<img src="images/slider-index-banners.jpg" alt="#">
+				    </div>
+                    <div class="swiper-slide">
+						<img src="images/slider-ibook.jpg" alt="#">
+				    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper_pagination_2"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+			
+			<div style="height:25px"></div>
+			<div class="text_1_portfolio">PAINTING</div>
+			<div class="swiper-container mt-2 swiper_3">
+                <div class="swiper-wrapper">
+			        <div class="swiper-slide swiper_slider_3">
+			            <img src="images/58575729_p0_master1200.jpg" alt="#">
+			        </div>
+                    <div class="swiper-slide swiper_slider_3">
+			            <img src="images/58279977_p0_master1200.jpg" alt="#">
+			        </div>
+                    <div class="swiper-slide swiper_slider_3">
+			            <img src="images/80048520_p0_master1200.jpg" alt="#">
+			        </div>
+					<div class="swiper-slide swiper_slider_3">
+			            <img src="images/80581462_p0_master1200.jpg" alt="#">
+			        </div>
+					<div class="swiper-slide swiper_slider_3">
+			            <img src="images/81613846_p0_master1200.jpg" alt="#">
+			        </div>
+					<div class="swiper-slide swiper_slider_3">
+			            <img src="images/81224721_p0_master1200.jpg" alt="#">
+			        </div>
+					<div class="swiper-slide swiper_slider_3">
+			            <img src="images/85500940_p0_master1200.jpg" alt="#">
+			        </div>
+					<div class="swiper-slide swiper_slider_3">
+			            <img src="images/74298918_p0_master1200.jpg" alt="#">
+			        </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper_pagination_3"></div>
+				<!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
 		</div>
 		<div class="block_portfolio">
-		    1
+			<div class="title_block_portfolio">
+			    <div class="title_portfolio">CONTACT</div>
+				<div class="title_line_portfolio"></div>
+			</div>
 			
+			<div style="height:20px"></div>
+			<div class="d-md-flex justify-content-between align-items-center">
+			    <div class="w-100 d-flex justify-content-start align-items-center">
+				    <div class="icon_protfolio"><img src="images/phone.png" alt="#"></div>
+				    <div >
+					    <div class="text_1_portfolio">PHONE</div>
+			             <div class="text_2_portfolio">+86 14715491141</div>
+					</div>
+				</div>
+				<div class="w-100 d-flex justify-content-start align-items-center mt-4 mt-md-0">
+				    <div class="icon_protfolio"><img src="images/mail.png" alt="#"></div>
+				    <div >
+					    <div class="text_1_portfolio">E-MAIL</div>
+			             <div class="text_2_portfolio">791704497@qq.com</div>
+					</div>
+				</div>
+			</div>
+		    
 		</div>
+		
+		<div style="height:55px"></div>
 	</div>	
 </body>
 	
 	
-	
+<script>
+    var swiper = new Swiper('.swiper_3', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+		nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10
+    });
+</script>	
+
+ <script>
+    var swiper = new Swiper('.swiper_2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+    </script>	
+<!--<script>
 
 	
-	
-	
+$(document).ready(function(){
+  $(window).on("scroll", function(){
+		if($(window).scrollTop() > 50){
+			$(".photo_portfolio").addClass("photo_scroll_portfolio");
+		} else {
+			$(".photo_portfolio").removeClass("photo_scroll_portfolio");
+		}
+	});
+});		
+</script>	
+	-->
 	
 	
 </html>
