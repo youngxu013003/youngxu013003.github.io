@@ -38,8 +38,8 @@
 		background:#45576A;
 	}
 	.main-container{
-		width: 90%;
-		max-width: 768px;
+		width: 96%;
+		max-width: 840px;
 		margin:auto;
 		background-color: transparent;
 		position:relative;
@@ -190,17 +190,106 @@
 		margin-right: 10px;
 		letter-spacing: 0.02em;
 	}
-	.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+	.swiper_right_2, .swiper-container-rtl .swiper_right_2{
 		background-image: url("images/swiper_left.png")!important;
 		background-size: contain!important;
 	}
-	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+	.swiper_left_2, .swiper-container-rtl .swiper_left_2{
 		background-image: url("images/swiper_right.png")!important;
 		background-size: contain!important;
+	}
+	.swiper_right_3, .swiper-container-rtl .swiper_right_3{
+		background-image: url("images/swiper_left_white.png")!important;
+		background-size: contain!important;
+	}
+	.swiper_left_3, .swiper-container-rtl .swiper_left_3{
+		background-image: url("images/swiper_right_white.png")!important;
+		background-size: contain!important;
+	}
+	.pc_screen_block_portfolio{
+		position: absolute;
+		width: 68%;
+		height: 64%;
+		background-color: grey;
+		top: 13%;
+		transform: translateX(-50%);
+		left: 50%;
+		border-radius: 2px;
+	}
+	.case_flexbox_portfolio{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		bottom: 6%;
+		left: 0px;
+	}
+	.case_box_portfolio{
+		width: 72px;
+		height: 28px;
+		font-size: 14px;
+		background-color: #45576A;
+		border-radius: 44px;
+		text-align: center;
+		color: white;
+		line-height: 27px;
+		letter-spacing: 0.04em;
+	}
+	.case_btn_portfolio{
+		width: 28px;
+		height: 28px;
+		font-size: 14px;
+		color: white;
+		background-color: #45576A;
+		text-align: center;
+		line-height: 27px;
+		border-radius: 100%;
+		position: relative;
+	}
+	.radio_portfolio{
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		z-index: 2;
+		appearance:none;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		top: 0;
+		left: 0;
+		background-color: white;
+		opacity: 0;
+		outline: none;
+		cursor: pointer;
+	}
+	.radio_portfolio:checked{
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		z-index: 2;
+		appearance:none;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		top: 0;
+		left: 0;
+		background-color: white;
+		opacity: 0.3;
+		outline: none;
+	}
+	#pc_screen_portfolio{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
 	}
 	@media(max-width:576px){
 		.menu_option_portfolio{
 			font-size: 14px;
+		}
+		.block_portfolio{
+			padding: 14px;
 		}
 	}
 </style>	
@@ -248,22 +337,59 @@
 			</div>
 			<div style="height:25px"></div>
 		    <div class="text_1_portfolio">UI/UX DESIGN</div>
+			<div class="mt-2 position-relative">
+			    <img src="images/img-pc.jpg" alt="#">
+				<div class="pc_screen_block_portfolio screen_1">
+				    <div id="pc_screen_portfolio">
+					    <img src="images/screencapture-1.jpg" style="height:auto" alt="#" id="pc_page_1" class="d-block">   
+						<img src="images/screencapture-2.jpg" style="height:auto" alt="#" id="pc_page_2" class="d-none">
+						<img src="images/screencapture-3.jpg" style="height:auto" alt="#" id="pc_page_3" class="d-none">
+						<img src="images/screencapture-4.jpg" style="height:auto" alt="#" id="pc_page_4" class="d-none">
+					</div>
+				</div>
+				<div class="case_flexbox_portfolio">
+			    <div class="case_box_portfolio">PAGE</div>
+				<div class="position-relative ml-1">
+				    <div class="case_btn_portfolio">1</div>	
+					<input type="radio" class="radio_portfolio" name="web" checked id="pc_radio_1">
+				</div>
+				<div class="position-relative ml-1">
+				    <div class="case_btn_portfolio">2</div>	
+					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_2">
+				</div>
+				<div class="position-relative ml-1">
+				    <div class="case_btn_portfolio">3</div>	
+					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_3">
+				</div>
+					<div class="position-relative ml-1">
+				    <div class="case_btn_portfolio">4</div>	
+					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_4">
+				</div>
+			</div>
+			</div>
 			
+			<div style="height:25px"></div>
 			<div class="text_1_portfolio">GRAPHIC DESIGN</div>
 			<div class="swiper-container mt-2 swiper_2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-						<img src="images/slider-index-banners.jpg" alt="#">
+					<div class="swiper-slide">
+						<img src="images/slider-poster.jpg" alt="#">
 				    </div>
                     <div class="swiper-slide">
 						<img src="images/slider-ibook.jpg" alt="#">
+				    </div>
+					<div class="swiper-slide">
+						<img src="images/slider-index-banners.jpg" alt="#">
+				    </div>
+					<div class="swiper-slide">
+						<img src="images/slider-web-banners.jpg" alt="#">
 				    </div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper_pagination_2"></div>
                 <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next swiper_left_2"></div>
+                <div class="swiper-button-prev swiper_right_2"></div>
             </div>
 			
 			<div style="height:25px"></div>
@@ -298,8 +424,8 @@
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper_pagination_3"></div>
 				<!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next swiper_left_3"></div>
+                <div class="swiper-button-prev swiper_right_3"></div>
             </div>
 		</div>
 		<div class="block_portfolio">
@@ -367,6 +493,38 @@ $(document).ready(function(){
 });		
 </script>	
 	-->
+<script>
+$(document).ready(function(){
+    $("#pc_radio_1").click(function () {
+        $("#pc_page_1").addClass("d-block").removeClass("d-none");
+		$("#pc_page_2,#pc_page_3,#pc_page_4").addClass("d-none").removeClass("d-block");
+		document.getElementById("pc_screen_portfolio").scrollTop = 0;
+    });
+});	
 	
+$(document).ready(function(){
+    $("#pc_radio_2").click(function () {
+        $("#pc_page_2").addClass("d-block").removeClass("d-none");
+		$("#pc_page_1,#pc_page_3,#pc_page_4").addClass("d-none").removeClass("d-block");
+		document.getElementById("pc_screen_portfolio").scrollTop = 0;
+    });
+});	
+	
+$(document).ready(function(){
+    $("#pc_radio_3").click(function () {
+        $("#pc_page_3").addClass("d-block").removeClass("d-none");
+		$("#pc_page_1,#pc_page_2,#pc_page_4").addClass("d-none").removeClass("d-block");
+		document.getElementById("pc_screen_portfolio").scrollTop = 0;
+    });
+});		
+
+$(document).ready(function(){
+    $("#pc_radio_4").click(function () {
+        $("#pc_page_4").addClass("d-block").removeClass("d-none");
+		$("#pc_page_1,#pc_page_2,#pc_page_3").addClass("d-none").removeClass("d-block");
+		document.getElementById("pc_screen_portfolio").scrollTop = 0;
+    });
+});		
+</script>	
 	
 </html>
