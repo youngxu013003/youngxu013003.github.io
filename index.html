@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-touch-fullscreen" content="yes" />
 <link href="https://fanshare.hk/CC_upload/webfont/webfont.css" rel="stylesheet" type="text/css">
-<title>Portfolio</title>
+<title>My Homepage</title>
 <script src="js/jquery-3.2.1.min.js"></script>	
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 	}
 	.main-container{
 		width: 96%;
-		max-width: 840px;
+		max-width: 992px;
 		margin:auto;
 		background-color: transparent;
 		position:relative;
@@ -53,13 +53,26 @@
 		height: 80px!important;
 	}
 	.photo_portfolio{
-		width: 100px;
-		height: 100px;
-		background-color: #45576A;
+		width: 140px;
+		height: 140px;
 		border-radius: 100%;
 		margin: auto;
-		border: 4px solid rgba(255,255,255,0.2);
-		transition: 0.5s;
+		overflow: hidden;
+		position: relative;
+		background-image: url("images/jacky.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.photo_border_portfolio{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 4px solid rgba(255,255,255,0.4);
+		border-radius: 100%;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 50%;
 	}
 	.name_portfolio{
 		text-align: center;
@@ -110,7 +123,6 @@
 		border-top: 2px solid #45576A;
 		background-color: rgba(255,255,255,0.8);
 		padding: 30px;
-		margin:20px 0px;
 	}
 	.text_1_portfolio{
 		font-size: 20px;
@@ -144,7 +156,6 @@
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
 
         /* Center slide text vertically */
         display: -webkit-box;
@@ -206,15 +217,25 @@
 		background-image: url("images/swiper_right_white.png")!important;
 		background-size: contain!important;
 	}
+	.graphic_bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-image: url("images/graphic_bg.jpg");
+		background-size: cover;
+	}
 	.pc_screen_block_portfolio{
 		position: absolute;
 		width: 68%;
-		height: 64%;
+		height: 60%;
 		background-color: grey;
-		top: 13%;
+		top: 18%;
 		transform: translateX(-50%);
 		left: 50%;
-		border-radius: 2px;
+		border-radius: 3px;
+		overflow: hidden;
 	}
 	.case_flexbox_portfolio{
 		display: flex;
@@ -284,6 +305,36 @@
 		height: 100%;
 		overflow-y: scroll;
 	}
+	.info_block_portfolio{
+		width: 55%;
+		border-right: 1px solid rgba(0,0,0,0.05);
+	}
+	.skill_block_portfolio{
+		width: 45%;
+		padding-left: 5%;
+	}
+	.icon_img_portfolio{
+		width: 58px;
+		height: 60px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	@media(max-width:768px){
+	    .info_block_portfolio{
+		    width: 100%;
+			border-right: none;
+	    }
+	    .skill_block_portfolio{
+		    width: 100%;
+			padding-left: 0%;
+	    }	
+		.icon_img_portfolio{
+			width: 46px;
+			height: 48px;
+			margin-right: 12px;
+			margin-bottom: 12px;
+		}
+	}
 	@media(max-width:576px){
 		.menu_option_portfolio{
 			font-size: 14px;
@@ -300,43 +351,73 @@
     <div class="main-container">
 		
 		<div class="top_portfolio">
-		    <div class="photo_portfolio"></div>
+		    <div class="photo_portfolio">
+			    <div class="photo_border_portfolio"></div>
+			</div>
 		    <div class="name_portfolio">JACK YIN</div>
 		    <div class="job_title_portfolio">Product Manager</div>
 		</div>
 	    <div class="menu_portfolio">
-		    <div class="menu_option_portfolio">ABOUT</div>
-			<div class="menu_option_portfolio">PORTFOLIO</div>
-			<div class="menu_option_portfolio">CONTACT</div>
+		    <div class="menu_option_portfolio" id="about_btn">ABOUT</div>
+			<div class="menu_option_portfolio" id="portfolio_btn">PORTFOLIO</div>
+			<div class="menu_option_portfolio" id="contact_btn">CONTACT</div>
 		</div>
-		<div class="block_portfolio">
+		<div style="height:40px" id="about"></div>
+		<div class="block_portfolio" >
 			<div class="title_block_portfolio">
 			    <div class="title_portfolio">ABOUT</div>
 				<div class="title_line_portfolio"></div>
 			</div>
 			<div style="height:25px"></div>
-		    <div class="text_1_portfolio">EDUCATION</div>
-			<div style="height:8px"></div>
-			<div class="text_year_portfolio">2010 - 2014</div>
-			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
-			<div class="text_2_portfolio">Wuhan University</div>
-			<div class="text_year_portfolio">2014 - 2016</div>
-			<div class="text_2_portfolio">Huazhong University of Science and Technology</div>
-			<div style="height: 25px"></div>
-			<div class="text_1_portfolio ">WORK EXPERIENCE</div>
-			<div style="height:8px"></div>
-			<div class="text_year_portfolio">2016 - 2021</div>
-			<div class="text_2_portfolio">Huawei Limited</div>
-			<div style="height:25px"></div>
-			<div class="text_1_portfolio">SKILLS</div>
+			<div class="d-md-flex justify-content-start align-items-start">
+			    <div class="info_block_portfolio">
+				    <div class="text_1_portfolio">Education</div>
+					<div class="pl-2">
+					    <div class="text_year_portfolio mt-2">2010 - 2014</div>
+			            <div class="text_2_portfolio">Huazhong University of Science and Technology</div>
+			            <div class="text_2_portfolio">Wuhan University</div>
+			            <div class="text_year_portfolio mt-2">2014 - 2016</div>
+			            <div class="text_2_portfolio">Huazhong University of Science and </div>
+					</div>
+			       
+			
+			        <div style="height: 25px"></div>
+			        <div class="text_1_portfolio ">Works Experience</div>
+					<div class="pl-2">
+					    
+			            <div class="text_year_portfolio mt-2">2016 - 2021</div>
+			            <div class="text_2_portfolio">HUAWEI TECHNOLOGIES CO., LTD.</div>
+			            <div style="height:25px"></div>
+					</div>
+			
+				</div>
+				
+				
+				<div class="skill_block_portfolio">
+				    <div class="text_1_portfolio">Skill Set</div>
+					<div class="d-flex justify-content-start align-items-start flex-wrap mt-3 pl-2">
+					    <img src="images/softwave_ps.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_dw.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_ai.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_pr.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_lr.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_ae.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_sketch.png" class="icon_img_portfolio" alt="#">
+						<img src="images/softwave_ibook.png" class="icon_img_portfolio" alt="#">
+				    </div>
+				</div>
+			</div>
+		    
+			
 		</div>
-		<div class="block_portfolio">
+		<div style="height:40px" id="portfolio"></div>
+		<div class="block_portfolio" >
 			<div class="title_block_portfolio">
 			    <div class="title_portfolio">PORTFOLIO</div>
 				<div class="title_line_portfolio"></div>
 			</div>
 			<div style="height:25px"></div>
-		    <div class="text_1_portfolio">UI/UX DESIGN</div>
+		    <div class="text_1_portfolio">UI/UX Design</div>
 			<div class="mt-2 position-relative">
 			    <img src="images/img-pc.jpg" alt="#">
 				<div class="pc_screen_block_portfolio screen_1">
@@ -369,20 +450,22 @@
 			</div>
 			
 			<div style="height:25px"></div>
-			<div class="text_1_portfolio">GRAPHIC DESIGN</div>
-			<div class="swiper-container mt-2 swiper_2">
+			<div class="text_1_portfolio">Graphic Design</div>
+			<div class="position-relative">
+			    <div class="graphic_bg"></div>
+			    <div class="swiper-container mt-2 swiper_2">
                 <div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="images/slider-poster.jpg" alt="#">
+						<img src="images/slider-poster.png" alt="#">
 				    </div>
                     <div class="swiper-slide">
-						<img src="images/slider-ibook.jpg" alt="#">
+						<img src="images/slider-ibook.png" alt="#">
 				    </div>
 					<div class="swiper-slide">
-						<img src="images/slider-index-banners.jpg" alt="#">
+						<img src="images/slider-index-banners.png" alt="#">
 				    </div>
 					<div class="swiper-slide">
-						<img src="images/slider-web-banners.jpg" alt="#">
+						<img src="images/slider-web-banners.png" alt="#">
 				    </div>
                 </div>
                 <!-- Add Pagination -->
@@ -390,10 +473,12 @@
                 <!-- Add Arrows -->
                 <div class="swiper-button-next swiper_left_2"></div>
                 <div class="swiper-button-prev swiper_right_2"></div>
-            </div>
+            </div>	
+			</div>
+			
 			
 			<div style="height:25px"></div>
-			<div class="text_1_portfolio">PAINTING</div>
+			<div class="text_1_portfolio">Painting</div>
 			<div class="swiper-container mt-2 swiper_3">
                 <div class="swiper-wrapper">
 			        <div class="swiper-slide swiper_slider_3">
@@ -428,7 +513,8 @@
                 <div class="swiper-button-prev swiper_right_3"></div>
             </div>
 		</div>
-		<div class="block_portfolio">
+		<div style="height:40px" id="contact"></div>
+		<div class="block_portfolio" >
 			<div class="title_block_portfolio">
 			    <div class="title_portfolio">CONTACT</div>
 				<div class="title_line_portfolio"></div>
@@ -526,5 +612,34 @@ $(document).ready(function(){
     });
 });		
 </script>	
+
+	
+	
+<script>
+$(document).ready(function(){
+    $("#about_btn").click(function () {
+        $("html,body").animate({
+			scrollTop:$("#about").offset().top
+		},200);
+    });
+});		
+	
+$(document).ready(function(){
+    $("#portfolio_btn").click(function () {
+        $("html,body").animate({
+			scrollTop:$("#portfolio").offset().top
+		},200);
+    });
+});	
+	
+$(document).ready(function(){
+    $("#contact_btn").click(function () {
+        $("html,body").animate({
+			scrollTop:$("#contact").offset().top
+		},200);
+    });
+});	
+</script>	
+	
 	
 </html>
