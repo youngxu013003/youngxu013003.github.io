@@ -7,156 +7,217 @@
 <meta name="apple-touch-fullscreen" content="yes" />
 <link href="https://fanshare.hk/CC_upload/webfont/webfont.css" rel="stylesheet" type="text/css">
 <title>My Homepage</title>
-<script src="js/jquery-3.2.1.min.js"></script>	
+<script src="js/jquery-3.2.1.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<script  src="js/swiper.min.js"></script>	
+<script  src="js/swiper.min.js"></script>
 <link rel="stylesheet" href="css/swiper.min.css">
-	
-	
-	
 <style>
-	/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);*/
-	html,body{
-		width:100vw;
-		height:auto;
-		background-image: url("images/bg.jpeg");
-		background-size: cover;
-		background-position: top;
-		background-repeat: no-repeat;
-		font-family:Arial, Helvetica, sans-serif;
-        font-style: normal;
-		font-weight: 400;
-	}
-	img{
-		display: block;
+/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);*/
+html, body {
+	width: 100vw;
+	height: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	background-color: #FBFBFB;
+}
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*::selection {
+	color: white;
+	background: #45576A;
+}*/
+	.cover{
 		width: 100%;
-		height: 100%;
-	}
-	::selection{
-		color: white;
-		background:#45576A;
-	}
-	.main-container{
-		width: 96%;
-		max-width: 992px;
-		margin:auto;
-		background-color: transparent;
-		position:relative;
-	}
-	.top_portfolio{
-		padding: 30px 0px;
-		transform-origin: top center;
-	}
-	.photo_scroll_portfolio{
-		width: 80px!important;
-		height: 80px!important;
-	}
-	.photo_portfolio{
-		width: 140px;
-		height: 140px;
-		border-radius: 100%;
-		margin: auto;
-		overflow: hidden;
+		background-image: url("images/AdobeStock_111656343.jpeg");
+		background-size: cover;
+		background-position: top center;
+		text-align: center;
 		position: relative;
+		padding-top: 44px;
+	}
+	.name{
+		font-size: 54px;
+		font-weight: 500;
+		letter-spacing: 0em;
+		line-height: 1em;
+		color: white;
+		opacity: 0.9;
+	}
+	.name span{
+		color: #ebbc2e!important;
+	}
+	.job_title{
+		font-size: 23px;
+		letter-spacing: 0em;
+		line-height: 1em;
+		font-weight: 500;
+		color: white;
+		opacity: 0.9;
+	}
+	.cover_diver{
+		width: 84px;
+		height: 4px;
+		background-color:#ebbc2e;
+		margin: 14px auto 60px auto;
+		
+	}
+	.cover_img{
+		width: 180px;
+		height: 180px;
+		border-radius: 100%;
 		background-image: url("images/jacky.jpg");
 		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+		margin: auto;
+		z-index: 3;
+		position: relative;
 	}
-	.photo_border_portfolio{
+	.cover_white_block{
 		position: absolute;
+		bottom: 0;
 		width: 100%;
-		height: 100%;
-		border: 4px solid rgba(255,255,255,0.4);
-		border-radius: 100%;
-		transform: translate(-50%,-50%);
-		left: 50%;
-		top: 50%;
+		height: 130px;
+		background-color: #fbfbfb;
+		z-index: 2
 	}
-	.name_portfolio{
-		text-align: center;
-		font-size: 32px;
-		letter-spacing: 0.04em;
-		color: #28313A;
-		line-height: 1.2em;
-		margin-top: 10px;
-		font-weight: 500;
-	}
-	.job_title_portfolio{
-		text-align: center;
-		font-size: 14px;
-		letter-spacing: 0.04em;
-		color: #45576A;
-	}
-	.menu_portfolio{
-		width: 100%;
-		height: 54px;
-		background-color: #28313A;
-		display: flex;
-		justify-content: space-between;
-		align-content: center;
-		position: -webkit-sticky;
-        position: sticky;
-		top:-1px;
-		z-index: 2;
-	}
-	.menu_option_portfolio{
-		width: 100%;
-		text-align: center;
-		height: 54px;
-		line-height: 52px;
-		font-size: 16px;
-		letter-spacing: 0.02em;
-		color:white;
-		white-space: nowrap;
-		cursor: pointer;
-	}
-	.menu_option_portfolio:hover{
-		background-color:#45576A; 
-	}
-	.menu_option_active_portfolio{
-		color: white !important;
-		background-color:#45576A !important;
-	}
-	.block_portfolio{
-		border-top: 2px solid #45576A;
-		background-color: rgba(255,255,255,0.8);
-		padding: 30px;
-	}
-	.text_1_portfolio{
+	.info_title{
+		color: #282828;
 		font-size: 20px;
-		color: #28313A;
-		letter-spacing: 0.04em;
+		letter-spacing: 0em;
+		width: 100%;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
 		line-height: 1.4em;
-		font-weight: 500;
 	}
-	.text_year_portfolio{
+	.yellow_point{
+		width: 18px;
+		height: 18px;
+		background-color: white;
+		border-radius: 100%;
+		border: 4px solid #ebbc2e;
+		min-width: 18px;
+		min-height: 18px;
+	}
+	.year{
+		height: 18px;
+		color: #ebbc2e;
+		margin-left: 10px;
+		line-height: 1.2em;
+	}
+	.grey_line{
+		width: 6px;
+		min-width: 6px;
+		margin: auto 6px;
+		background-color: rgba(0,0,0,0.1);
+		height: 54px;
+		border-radius: 6px;
+	}
+	.text_1{
 		font-size: 14px;
 		letter-spacing: 0.02em;
-		color: #EFCE67;
+		color: #282828;
 	}
-	.text_2_portfolio{
-		font-size: 16px;
+	.text_2{
+		font-size: 17px;
 		letter-spacing: 0.02em;
-		color: #45576A;
-		text-align: left;
+		color: #282828;
+		line-height: 1.4em;
 	}
-	.icon_protfolio{
-		width: 58px;
-		height: 58px;
-		margin-right: 10px;
+	.knowledge_block{
+		width: 25%;
+		padding:0px 20px;
+		margin-bottom: 20px;
+	}
+	.loading_bar{
+		width: 100%;
+		height: 12px;
+		background-color: #DBDBDB;
+		border-radius: 12px;
+		position: relative;
+		margin-top: 6px;
+	}
+	.process_bar{
+		height: 12px;
+		background-color:#ebbc2e;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 12px;
+	}
+	.skill_block{
+		width: 11%;
+		padding:10px 15px;
+	}
+	.portfolio_title{
+		color: #282828;
+		font-size: 20px;
+		letter-spacing: 0em;
+		width: 100%;
+		line-height: 1.4em;
+		text-align: center;
+	}	
+	.diver{
+		width: 54px;
+		height: 2px;
+		background-color:#ebbc2e;
+		margin:10px auto;
+	}
+	.web_design_block{
+		width: 100%;
+		background-image: url("images/AdobeStock_254979077.jpeg");
+		background-size: contain;
+		background-position: center bottom;
+		position: relative;
+		margin-top: 30px;
+	}
+	.pc{
+		margin: auto;
+		width: 95%;
+		max-width: 1080px;
+		z-index: 3;
+		position: relative;
+	}
+	.web_design_white{
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		background-color: #fbfbfb;
+		height: 88px;
+	}
+	.web_design_btn{
+		width: 160px;
+		height: 40px;
+		border-radius: 40px;
+		background-color: #DBDBDB;
+		color: #282828;
+		cursor: pointer;
+		margin: 0px 10px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 14px;
 	}
 	
 	
-	.swiper-container {
-        width: 100%;
-        height: 100%;
-    }
+	
+	.painting_block{
+		background-color:#e6e6e6;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.paint_swiper_container{
+		width: 95%;
+		margin: auto;
+	    margin-top: 20px;
+		max-width: 1200px;
+	}
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-
+        width: 100%;
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -171,475 +232,454 @@
         -webkit-align-items: center;
         align-items: center;
     }
-	.swiper_slider_3{
-		width: 40%;
+	.paint_swiper_pagination{
+		position: relative;
+		margin-top: 24px;
 	}
-	.swiper_pagination_3{
-		position: relative!important;
-		bottom: 0px!important;
-		margin-top: 8px!important;
+	.paint_swiper_pagination .swiper-pagination-bullet-active{
+		background-color: #ebbc2e;
 	}
-	.swiper_pagination_3 .swiper-pagination-bullet-active, .swiper_pagination_2 .swiper-pagination-bullet-active{
-		background: #45576A!important;
+	.graphic_swiper_slider{
+		background-color: #fbfbfb;
 	}
-	.title_block_portfolio{
-		display: flex;
-		justify-content: space-between;
-		align-items:center;
+	.graphic_swiper_container{
+		margin: auto;
+		width: 100%;
+		max-width:1200px;
 	}
-	.title_line_portfolio{
-		width:100%;
-		flex-grow: 1;
-		height: 1px;
-		background-color:#45576A;
-		opacity: 0.2;
-		margin-top: 18px;
+	.graphic_swiper_next_btn{
+		background-image: url("images/swiper_right_grey.png")!important;
+		background-size: contain;
+		width: 24px;
 	}
-	.title_portfolio{
-		font-size: 24px;
-		color: #45576A;
-		margin-right: 10px;
+	.graphic_swiper_prev_btn{
+		background-image: url("images/swiper_left_grey.png")!important;
+		background-size: contain;
+		width: 24px;
+	}
+	.graphic_slider_text{
+		font-size: 30px;
+		font-weight: 800;
+		color: #282828;
+		white-space: nowrap;
 		letter-spacing: 0.02em;
 	}
-	.swiper_right_2, .swiper-container-rtl .swiper_right_2{
-		background-image: url("images/swiper_left.png")!important;
-		background-size: contain!important;
-	}
-	.swiper_left_2, .swiper-container-rtl .swiper_left_2{
-		background-image: url("images/swiper_right.png")!important;
-		background-size: contain!important;
-	}
-	.swiper_right_3, .swiper-container-rtl .swiper_right_3{
-		background-image: url("images/swiper_left_white.png")!important;
-		background-size: contain!important;
-	}
-	.swiper_left_3, .swiper-container-rtl .swiper_left_3{
-		background-image: url("images/swiper_right_white.png")!important;
-		background-size: contain!important;
-	}
-	.graphic_bg{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background-image: url("images/graphic_bg.jpg");
-		background-size: cover;
-	}
-	.pc_screen_block_portfolio{
-		position: absolute;
-		width: 68%;
-		height: 60%;
-		background-color: grey;
-		top: 18%;
-		transform: translateX(-50%);
-		left: 50%;
-		border-radius: 3px;
-		overflow: hidden;
-	}
-	.case_flexbox_portfolio{
+	
+	
+	
+	
+	
+	.contact_block{
+		margin-top: 40px;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
-		position: absolute;
-		width: 100%;
-		z-index: 2;
-		bottom: 6%;
-		left: 0px;
+		flex-wrap: wrap;
 	}
-	.case_box_portfolio{
-		width: 72px;
-		height: 28px;
-		font-size: 14px;
-		background-color: #45576A;
-		border-radius: 44px;
-		text-align: center;
-		color: white;
-		line-height: 27px;
-		letter-spacing: 0.04em;
+	
+	
+	.contact_info_block{
+		display: flex;
+		justify-content:flex-start;
+		align-items: center;
+		width: 33.3%;
+		margin-bottom: 30px;
+		text-align: left;
 	}
-	.case_btn_portfolio{
-		width: 28px;
-		height: 28px;
-		font-size: 14px;
-		color: white;
-		background-color: #45576A;
-		text-align: center;
-		line-height: 27px;
-		border-radius: 100%;
-		position: relative;
+	.contact_info_block div{
+		white-space: nowrap;
 	}
-	.radio_portfolio{
-		width: 28px;
-		height: 28px;
-		position: absolute;
-		z-index: 2;
-		appearance:none;
-		-webkit-appearance:none;
-		-moz-appearance:none;
-		top: 0;
-		left: 0;
-		background-color: white;
-		opacity: 0;
-		outline: none;
-		cursor: pointer;
+	.contact_icon{
+		width: 80px;
+		margin-right: 12px;
+		min-width: 80px;
 	}
-	.radio_portfolio:checked{
-		width: 28px;
-		height: 28px;
-		position: absolute;
-		z-index: 2;
-		appearance:none;
-		-webkit-appearance:none;
-		-moz-appearance:none;
-		top: 0;
-		left: 0;
-		background-color: white;
-		opacity: 0.3;
-		outline: none;
+	.contact_title{
+		height: 18px;
+		color: #ebbc2e;
+		line-height: 1.2em;
+		margin-bottom: 5px;
 	}
-	#pc_screen_portfolio{
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-		overflow-y: scroll;
+@media(max-width:992px) {
+    .knowledge_block{
+		width: 50%;
 	}
-	.info_block_portfolio{
+	.skill_block{
+		width: 18%;
+		max-width: 100px;
+	}
+	.contact_info_block{
 		width: 55%;
-		border-right: 1px solid rgba(0,0,0,0.05);
 	}
-	.skill_block_portfolio{
-		width: 45%;
-		padding-left: 5%;
-	}
-	.icon_img_portfolio{
-		width: 58px;
-		height: 60px;
-		margin-right: 20px;
-		margin-bottom: 20px;
-	}
+}
 	@media(max-width:768px){
-	    .info_block_portfolio{
-		    width: 100%;
-			border-right: none;
-	    }
-	    .skill_block_portfolio{
-		    width: 100%;
-			padding-left: 0%;
+	    .skill_block{
+		    width: 18%;
+			padding: 8px 12px;
 	    }	
-		.icon_img_portfolio{
-			width: 46px;
-			height: 48px;
-			margin-right: 12px;
-			margin-bottom: 12px;
-		}
 	}
-	@media(max-width:576px){
-		.menu_option_portfolio{
+@media(max-width:576px) {
+	.name{
+		font-size: 38px;
+	}
+	.job_title{
+		font-size: 16px;
+	}
+	.cover_diver{
+		width: 64px;
+		height: 2px;
+		background-color:#ebbc2e;
+		margin: 10px auto 30px auto;
+	}
+	.cover_img{
+		width: 140px;
+		height: 140px;
+	}
+	.cover_white_block{
+		height: 100px;
+	}
+	.skill_block{
+		width: 19%;
+		padding: 7px;
+	}
+	.web_design_block{
+		display: none;
+	}
+	.contact_info_block{
+		width: 70%;
+	}
+	.graphic_swiper_next_btn,.graphic_swiper_prev_btn{
+		width: 18px;
+	}
+	.graphic_slider_text{
+		font-size: 24px;
+		letter-spacing: 0em;
+	}
+	
+}
+	@media(max-width:414px){
+		.knowledge_block{
+		    width: 100%;
+	    }
+		.grey_line{
+			height: 64px;
+		}
+		.text_1{
+			font-size: 12px;
+		}
+		.text_2{
 			font-size: 14px;
 		}
-		.block_portfolio{
+		.skill_block{
+		    width: 32%;
 			padding: 14px;
+	    }
+		.contact_block{
+			width: auto;
+			display: inline-block;
+			margin:30px auto;
+		}
+		.contact_icon{
+			width: 68px;
+			min-width: 68px;
 		}
 	}
-</style>	
-	
+	@media(max-width:356px){
+		
+	}
+</style>
 </head>
 
 <body>
-    <div class="main-container">
-		
-		<div class="top_portfolio">
-		    <div class="photo_portfolio">
-			    <div class="photo_border_portfolio"></div>
-			</div>
-		    <div class="name_portfolio">JACK YIN</div>
-		    <div class="job_title_portfolio">Product Manager</div>
-		</div>
-	    <div class="menu_portfolio">
-		    <div class="menu_option_portfolio" id="about_btn">ABOUT</div>
-			<div class="menu_option_portfolio" id="portfolio_btn">PORTFOLIO</div>
-			<div class="menu_option_portfolio" id="contact_btn">CONTACT</div>
-		</div>
-		<div style="height:40px" id="about"></div>
-		<div class="block_portfolio" >
-			<div class="title_block_portfolio">
-			    <div class="title_portfolio">ABOUT</div>
-				<div class="title_line_portfolio"></div>
-			</div>
-			<div style="height:25px"></div>
-			<div class="d-md-flex justify-content-start align-items-start">
-			    <div class="info_block_portfolio">
-				    <div class="text_1_portfolio">Education</div>
-					<div class="pl-2">
-					    <div class="text_year_portfolio mt-2">2010 - 2014</div>
-			            <div class="text_2_portfolio">Huazhong University of Science and Technology</div>
-			            <div class="text_2_portfolio">Wuhan University</div>
-			            <div class="text_year_portfolio mt-2">2014 - 2016</div>
-			            <div class="text_2_portfolio">Huazhong University of Science and </div>
-					</div>
-			       
-			
-			        <div style="height: 25px"></div>
-			        <div class="text_1_portfolio ">Works Experience</div>
-					<div class="pl-2">
-					    
-			            <div class="text_year_portfolio mt-2">2016 - 2021</div>
-			            <div class="text_2_portfolio">HUAWEI TECHNOLOGIES CO., LTD.</div>
-			            <div style="height:25px"></div>
-					</div>
-			
+    <div class="cover">
+	    <div class="name"><span>JACK</span> YIN</div>
+		<div class="job_title">PRODUCT MANAGER</div>
+		<div class="cover_diver"></div>
+		<div class="cover_img"></div>
+		<div class="cover_white_block"></div>
+	</div>
+	<div class="container mt-5">
+	    <div class="d-lg-flex justify-content-between align-items-start">
+			<div class="w-100 px-3 mt-5">
+			    <div class="info_title">EDUCATION</div>
+				<div class="d-flex justify-content-start align-items-center mt-3">
+				    <div class="yellow_point"></div>
+					<div class="year">2010-2014</div>
 				</div>
-				
-				
-				<div class="skill_block_portfolio">
-				    <div class="text_1_portfolio">Skill Set</div>
-					<div class="d-flex justify-content-start align-items-start flex-wrap mt-3 pl-2">
-					    <img src="images/softwave_ps.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_dw.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_ai.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_pr.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_lr.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_ae.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_sketch.png" class="icon_img_portfolio" alt="#">
-						<img src="images/softwave_ibook.png" class="icon_img_portfolio" alt="#">
-				    </div>
-				</div>
-			</div>
-		    
-			
-		</div>
-		<div style="height:40px" id="portfolio"></div>
-		<div class="block_portfolio" >
-			<div class="title_block_portfolio">
-			    <div class="title_portfolio">PORTFOLIO</div>
-				<div class="title_line_portfolio"></div>
-			</div>
-			<div style="height:25px"></div>
-		    <div class="text_1_portfolio">UI/UX Design</div>
-			<div class="mt-2 position-relative">
-			    <img src="images/img-pc.jpg" alt="#">
-				<div class="pc_screen_block_portfolio screen_1">
-				    <div id="pc_screen_portfolio">
-					    <img src="images/screencapture-1.jpg" style="height:auto" alt="#" id="pc_page_1" class="d-block">   
-						<img src="images/screencapture-2.jpg" style="height:auto" alt="#" id="pc_page_2" class="d-none">
-						<img src="images/screencapture-3.jpg" style="height:auto" alt="#" id="pc_page_3" class="d-none">
-						<img src="images/screencapture-4.jpg" style="height:auto" alt="#" id="pc_page_4" class="d-none">
+				<div class="d-flex justify-content-start align-items-start mt-2">
+				    <div class="grey_line"></div>
+					<div style="margin-left: 10px">
+					    <div class="text_1">Huazhong University of Science and technology</div>
+						<div class="text_2">Advertising (BA)</div>
 					</div>
 				</div>
-				<div class="case_flexbox_portfolio">
-			    <div class="case_box_portfolio">PAGE</div>
-				<div class="position-relative ml-1">
-				    <div class="case_btn_portfolio">1</div>	
-					<input type="radio" class="radio_portfolio" name="web" checked id="pc_radio_1">
+				<div class="d-flex justify-content-start align-items-center mt-2">
+				    <div class="yellow_point"></div>
+					<div class="year">2011-2013</div>
 				</div>
-				<div class="position-relative ml-1">
-				    <div class="case_btn_portfolio">2</div>	
-					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_2">
+				<div class="d-flex justify-content-start align-items-start mt-2">
+				    <div class="grey_line"></div>
+					<div style="margin-left: 10px">
+					    <div class="text_1">Wuhan University</div>
+						<div class="text_2">Package Engineering (BA)</div>
+					</div>
 				</div>
-				<div class="position-relative ml-1">
-				    <div class="case_btn_portfolio">3</div>	
-					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_3">
+				<div class="d-flex justify-content-start align-items-center mt-2">
+				    <div class="yellow_point"></div>
+					<div class="year">2014-2016</div>
 				</div>
-					<div class="position-relative ml-1">
-				    <div class="case_btn_portfolio">4</div>	
-					<input type="radio" class="radio_portfolio" name="web" id="pc_radio_4">
+				<div class="d-flex justify-content-start align-items-start mt-2">
+				    <div class="grey_line"></div>
+					<div style="margin-left: 10px">
+					    <div class="text_1">The Hong Kong Polytechnic University</div>
+						<div class="text_2">Multimedia and Entertainment Techonology (MA)</div>
+					</div>
 				</div>
 			</div>
+		    <div class="w-100 px-3 mt-5">
+			    <div class="info_title">WORK EXPERIENCE</div>
+				<div class="d-flex justify-content-start align-items-center mt-3">
+				    <div class="yellow_point"></div>
+					<div class="year">2015-2017</div>
+				</div>
+				<div class="d-flex justify-content-start align-items-start mt-2">
+				    <div class="grey_line"></div>
+					<div style="margin-left: 10px">
+					    <div class="text_1">Cloud Pillar Limited</div>
+						<div class="text_2">UX/UI Designer</div>
+					</div>
+				</div>
+				<div class="d-flex justify-content-start align-items-center mt-3">
+				    <div class="yellow_point"></div>
+					<div class="year">2017-2022</div>
+				</div>
+				<div class="d-flex justify-content-start align-items-start mt-2">
+				    <div class="grey_line"></div>
+					<div style="margin-left: 10px">
+					    <div class="text_1">Huazhong University of Science and technology</div>
+						<div class="text_2">UI Designer</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-100 px-3 mt-5">
+		    <div class="info_title">KNOWLEDGE</div>
+			<div class="mt-4 px-md-2 px-0 d-flex justify-content-between align-items-start flex-wrap">
+			    <div class="knowledge_block">
+				    <div class="text_2">Web Design</div>
+					<div class="loading_bar">
+					    <div class="process_bar" style="width: 80%"></div>
+					</div>
+				</div>
+				<div class="knowledge_block">
+				    <div class="text_2">Graphic Design</div>
+					<div class="loading_bar">
+					    <div class="process_bar" style="width: 60%"></div>
+					</div>
+				</div>
+				<div class="knowledge_block">
+				    <div class="text_2">Video Editing</div>
+					<div class="loading_bar">
+					    <div class="process_bar" style="width: 30%"></div>
+					</div>
+				</div>
+				<div class="knowledge_block">
+				    <div class="text_2">Painting</div>
+					<div class="loading_bar">
+					    <div class="process_bar" style="width: 50%"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-100 px-3 mt-5">
+		    <div class="info_title">SKILL</div>
+			<div class="d-flex justify-content-center align-items-center flex-wrap mt-3">
+			    <div class="skill_block"><img src="images/PS.png" alt="#"></div>
+				<div class="skill_block"><img src="images/AI.png" alt="#"></div>
+				<div class="skill_block"><img src="images/DW.png" alt="#"></div>
+				<div class="skill_block"><img src="images/LR.png" alt="#"></div>
+				<div class="skill_block"><img src="images/AE.png" alt="#"></div>
+				<div class="skill_block"><img src="images/PR.png" alt="#"></div>
+				<div class="skill_block"><img src="images/SAI.png" alt="#"></div>
+				<div class="skill_block"><img src="images/SKETCH.png" alt="#"></div>
+				<div class="skill_block"><img src="images/IBOOKS.png" alt="#"></div>
+			</div>
+		</div>
+	</div>
+	<div style="height: 80px"></div>
+	<div class="portfolio_title">WEB DESIGN</div>
+	<div class="diver"></div>
+	
+	<div class="web_design_block">
+	    <div class="web_design_white"></div>
+	    <div class="pc"><img src="images/pc.png" alt="#"></div>
+		<div class="d-flex justify-content-center align-items-start pt-4 pb-5">
+		    <div class="web_design_btn">Index Page</div>
+			<div class="web_design_btn">User Setting</div>
+			<div class="web_design_btn">Shopping Page</div>
+			<div class="web_design_btn">Product Detail</div>
+		</div>
+	</div>
+	
+	<div style="height: 80px"></div>
+	<div class="portfolio_title">GRAPHIC DESIGN</div>
+	<div class="diver"></div>
+	<div style="height: 20px"></div>
+	<div class="swiper-container graphic_swiper_container">
+        <div class="swiper-wrapper">
+			<div class="swiper-slide graphic_swiper_slider">
+				<div>
+				    <div class="graphic_slider_text">POSTER DESIGN</div>
+			        <img src="images/slider-poster.png">
+				</div>
+			</div>
+            <div class="swiper-slide graphic_swiper_slider">
+				<div>
+					<div class="graphic_slider_text">IBOOK DESIGN</div>
+				    <img src="images/slider-ibook.png">
+				</div>
+			    
+			</div>
+            <div class="swiper-slide graphic_swiper_slider">
+				<div>
+					<div class="graphic_slider_text">APP BANNER DESIGN</div>
+				    <img src="images/slider-index-banners.png">
+				</div>
+			    
 			</div>
 			
-			<div style="height:25px"></div>
-			<div class="text_1_portfolio">Graphic Design</div>
-			<div class="position-relative">
-			    <div class="graphic_bg"></div>
-			    <div class="swiper-container mt-2 swiper_2">
-                <div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="images/slider-poster.png" alt="#">
-				    </div>
-                    <div class="swiper-slide">
-						<img src="images/slider-ibook.png" alt="#">
-				    </div>
-					<div class="swiper-slide">
-						<img src="images/slider-index-banners.png" alt="#">
-				    </div>
-					<div class="swiper-slide">
-						<img src="images/slider-web-banners.png" alt="#">
-				    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper_pagination_2"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next swiper_left_2"></div>
-                <div class="swiper-button-prev swiper_right_2"></div>
-            </div>	
+			<div class="swiper-slide graphic_swiper_slider">
+				<div>
+					<div class="graphic_slider_text">WEB BANNER DESIGN</div>
+				    <img src="images/slider-web-banners.png">
+				</div>
+			    
 			</div>
-			
-			
-			<div style="height:25px"></div>
-			<div class="text_1_portfolio">Painting</div>
-			<div class="swiper-container mt-2 swiper_3">
-                <div class="swiper-wrapper">
-			        <div class="swiper-slide swiper_slider_3">
-			            <img src="images/58575729_p0_master1200.jpg" alt="#">
-			        </div>
-                    <div class="swiper-slide swiper_slider_3">
-			            <img src="images/58279977_p0_master1200.jpg" alt="#">
-			        </div>
-                    <div class="swiper-slide swiper_slider_3">
-			            <img src="images/80048520_p0_master1200.jpg" alt="#">
-			        </div>
-					<div class="swiper-slide swiper_slider_3">
-			            <img src="images/80581462_p0_master1200.jpg" alt="#">
-			        </div>
-					<div class="swiper-slide swiper_slider_3">
-			            <img src="images/81613846_p0_master1200.jpg" alt="#">
-			        </div>
-					<div class="swiper-slide swiper_slider_3">
-			            <img src="images/81224721_p0_master1200.jpg" alt="#">
-			        </div>
-					<div class="swiper-slide swiper_slider_3">
-			            <img src="images/85500940_p0_master1200.jpg" alt="#">
-			        </div>
-					<div class="swiper-slide swiper_slider_3">
-			            <img src="images/74298918_p0_master1200.jpg" alt="#">
-			        </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper_pagination_3"></div>
-				<!-- Add Arrows -->
-                <div class="swiper-button-next swiper_left_3"></div>
-                <div class="swiper-button-prev swiper_right_3"></div>
+        </div>
+        <!-- Add Pagination -->
+        <!--<div class="swiper-pagination swiper-pagination-white "></div>-->
+        <!-- Add Arrows -->
+        <div class="swiper-button-next graphic_swiper_next_btn"></div>
+        <div class="swiper-button-prev graphic_swiper_prev_btn"></div>
+    </div>
+	<div style="height: 50px"></div>
+	
+	
+	
+	
+	
+	
+	<div class="painting_block">
+	    <div class="portfolio_title">PAINTING</div>
+	    <div class="diver"></div>
+		<div class="swiper-container paint_swiper_container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+				    <img src="images/58575729_p0_master1200.jpg">
+				</div>
+                <div class="swiper-slide">
+				    <img src="images/58279977_p0_master1200.jpg">
+				</div>
+				<div class="swiper-slide">
+				    <img src="images/80048520_p0_master1200.jpg">
+				</div>
+				<div class="swiper-slide">
+				    <img src="images/81224721_p0_master1200.jpeg">
+				</div>
+				<div class="swiper-slide">
+				    <img src="images/80581462_p0_master1200.jpg">
+				</div>
+				<div class="swiper-slide">
+				    <img src="images/85500940_p0_master1200.jpg">
+				</div>
             </div>
-		</div>
-		<div style="height:40px" id="contact"></div>
-		<div class="block_portfolio" >
-			<div class="title_block_portfolio">
-			    <div class="title_portfolio">CONTACT</div>
-				<div class="title_line_portfolio"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination paint_swiper_pagination"></div>
+        </div>
+
+		
+	</div>
+	
+	
+	<div class="container position-relative text-center">
+	    <div class="portfolio_title mt-5">CONTACT</div>
+	    <div class="diver"></div>
+		
+		<div class="contact_block ">
+		    <div class="contact_info_block">
+			    <div class="contact_icon">
+				    <img src="images/icon_phone.png" alt="#">
+				</div>
+			    <div>
+				    <div class="contact_title">phone</div>
+					<div class="text_1">(+852) 9713 4766</div>
+				    <div class="text_1">(+86) 14715491141</div>
+				</div>
 			</div>
 			
-			<div style="height:20px"></div>
-			<div class="d-md-flex justify-content-between align-items-center">
-			    <div class="w-100 d-flex justify-content-start align-items-center">
-				    <div class="icon_protfolio"><img src="images/phone.png" alt="#"></div>
-				    <div >
-					    <div class="text_1_portfolio">PHONE</div>
-			             <div class="text_2_portfolio">+86 14715491141</div>
-					</div>
+			<div class="contact_info_block">
+			    <div class="contact_icon">
+				    <img src="images/icon_mail.png" alt="#">
 				</div>
-				<div class="w-100 d-flex justify-content-start align-items-center mt-4 mt-md-0">
-				    <div class="icon_protfolio"><img src="images/mail.png" alt="#"></div>
-				    <div >
-					    <div class="text_1_portfolio">E-MAIL</div>
-			             <div class="text_2_portfolio">791704497@qq.com</div>
-					</div>
+			    <div>
+				    <div class="contact_title">E-mail</div>
+					<div class="text_1">xyang873@gmail.com</div>
+				    <div class="text_1">m18771053004@163.com</div>
 				</div>
 			</div>
-		    
+			
+			<div class="contact_info_block">
+			    <div class="contact_icon">
+				    <img src="images/icon_address.png" alt="#">
+				</div>
+			    <div>
+				    <div class="contact_title">Address</div>
+					<div class="text_1">R C 5/F NO. 63 Kueng Fo Road</div>
+                    <div class="text_1">Tai Po Market N.T.</div>
+				</div>
+			</div>
 		</div>
-		
-		<div style="height:55px"></div>
-	</div>	
+	</div>
+	
+	<div style="height: 100px"></div>
 </body>
 	
 	
+	
 <script>
-    var swiper = new Swiper('.swiper_3', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 'auto',
+    var swiper = new Swiper('.paint_swiper_container', {
+        pagination: '.paint_swiper_pagination',
         paginationClickable: true,
-		nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 10
+        slidesPerView: 6,
+        spaceBetween: 10,
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            414: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
     });
 </script>	
-
- <script>
-    var swiper = new Swiper('.swiper_2', {
-        pagination: '.swiper-pagination',
+	
+<script>
+    var swiper = new Swiper('.graphic_swiper_container', {
+        //pagination: '.swiper-pagination',
         paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 30
+        nextButton: '.graphic_swiper_next_btn',
+        prevButton: '.graphic_swiper_prev_btn',
+        spaceBetween: 30,
+        effect: 'fade'
     });
     </script>	
-<!--<script>
-
 	
-$(document).ready(function(){
-  $(window).on("scroll", function(){
-		if($(window).scrollTop() > 50){
-			$(".photo_portfolio").addClass("photo_scroll_portfolio");
-		} else {
-			$(".photo_portfolio").removeClass("photo_scroll_portfolio");
-		}
-	});
-});		
-</script>	
-	-->
-<script>
-$(document).ready(function(){
-    $("#pc_radio_1").click(function () {
-        $("#pc_page_1").addClass("d-block").removeClass("d-none");
-		$("#pc_page_2,#pc_page_3,#pc_page_4").addClass("d-none").removeClass("d-block");
-		document.getElementById("pc_screen_portfolio").scrollTop = 0;
-    });
-});	
-	
-$(document).ready(function(){
-    $("#pc_radio_2").click(function () {
-        $("#pc_page_2").addClass("d-block").removeClass("d-none");
-		$("#pc_page_1,#pc_page_3,#pc_page_4").addClass("d-none").removeClass("d-block");
-		document.getElementById("pc_screen_portfolio").scrollTop = 0;
-    });
-});	
-	
-$(document).ready(function(){
-    $("#pc_radio_3").click(function () {
-        $("#pc_page_3").addClass("d-block").removeClass("d-none");
-		$("#pc_page_1,#pc_page_2,#pc_page_4").addClass("d-none").removeClass("d-block");
-		document.getElementById("pc_screen_portfolio").scrollTop = 0;
-    });
-});		
-
-$(document).ready(function(){
-    $("#pc_radio_4").click(function () {
-        $("#pc_page_4").addClass("d-block").removeClass("d-none");
-		$("#pc_page_1,#pc_page_2,#pc_page_3").addClass("d-none").removeClass("d-block");
-		document.getElementById("pc_screen_portfolio").scrollTop = 0;
-    });
-});		
-</script>	
-
-	
-	
-<script>
-$(document).ready(function(){
-    $("#about_btn").click(function () {
-        $("html,body").animate({
-			scrollTop:$("#about").offset().top
-		},200);
-    });
-});		
-	
-$(document).ready(function(){
-    $("#portfolio_btn").click(function () {
-        $("html,body").animate({
-			scrollTop:$("#portfolio").offset().top
-		},200);
-    });
-});	
-	
-$(document).ready(function(){
-    $("#contact_btn").click(function () {
-        $("html,body").animate({
-			scrollTop:$("#contact").offset().top
-		},200);
-    });
-});	
-</script>	
 	
 	
 </html>
