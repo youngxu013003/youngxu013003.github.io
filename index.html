@@ -205,18 +205,28 @@ img {
 		height: 88px;
 	}
 	.web_design_btn{
-		width: 160px;
+		width: 24%;
 		height: 40px;
 		border-radius: 40px;
 		background-color: #DBDBDB;
 		color: #282828;
 		cursor: pointer;
-		margin: 0px 10px;
-		line-height: 40px;
+		line-height:40px;
 		text-align: center;
 		font-size: 14px;
+		white-space: nowrap;
 	}
-	
+	.web_design_btn_flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 30px;
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 92%;
+		flex-wrap: wrap;
+	}
 	
 	
 	.painting_block{
@@ -400,6 +410,10 @@ img {
 		    width: 18%;
 			padding: 8px 12px;
 	    }	
+		.web_design_btn{
+			width: 48%;
+			margin-bottom: 20px;
+		}
 	}
 @media(max-width:576px) {
 	.name{
@@ -425,9 +439,7 @@ img {
 		width: 19%;
 		padding: 7px;
 	}
-	.web_design_block{
-		display: none;
-	}
+	
 	.contact_info_block{
 		width: 70%;
 	}
@@ -438,7 +450,9 @@ img {
 		font-size: 24px;
 		letter-spacing: 0em;
 	}
-	
+	.more_btn_text{
+		font-size: 14px;
+	}
 }
 	@media(max-width:414px){
 		.knowledge_block{
@@ -610,7 +624,7 @@ img {
 				<img src="images/screencapture-4.jpg" alt="#" id="screen-4">
 			</div>
 		</div>
-		<div class="d-flex justify-content-center align-items-start pt-4 pb-5">
+		<div class="web_design_btn_flex">
 		    <div class="web_design_btn" id="btn-screen-1">Index</div>
 			<div class="web_design_btn" id="btn-screen-2">Landing Page</div>
 			<div class="web_design_btn" id="btn-screen-3">Information</div>
