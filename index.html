@@ -377,6 +377,12 @@ img {
 		cursor: pointer;
 		opacity: 0;
 	}
+	
+	
+	#screen-2,#screen-3,#screen-4{
+	    display: none;	
+	}
+	
 @media(max-width:992px) {
     .knowledge_block{
 		width: 50%;
@@ -597,15 +603,18 @@ img {
 	    <div class="web_design_white"></div>
 	    <div class="pc">
 			<img src="images/pc.png" alt="#">
-		    <div class="pc_screen">
-			    <img src="images/screencapture-1.jpg" alt="#">
+		    <div class="pc_screen" id="pc-screen">
+			    <img src="images/screencapture-1.jpg" alt="#" id="screen-1">
+				<img src="images/screencapture-2.jpg" alt="#" id="screen-2">
+				<img src="images/screencapture-3.jpg" alt="#" id="screen-3">
+				<img src="images/screencapture-4.jpg" alt="#" id="screen-4">
 			</div>
 		</div>
 		<div class="d-flex justify-content-center align-items-start pt-4 pb-5">
-		    <div class="web_design_btn">Index Page</div>
-			<div class="web_design_btn">User Setting</div>
-			<div class="web_design_btn">Shopping Page</div>
-			<div class="web_design_btn">Product Detail</div>
+		    <div class="web_design_btn" id="btn-screen-1">Index</div>
+			<div class="web_design_btn" id="btn-screen-2">Landing Page</div>
+			<div class="web_design_btn" id="btn-screen-3">Information</div>
+			<div class="web_design_btn" id="btn-screen-4">Product Detail</div>
 		</div>
 		
 		<div class="more_btn">
@@ -807,6 +816,40 @@ img {
     });
     </script>	
 	
+<script>
+$(document).ready(function(){
+    $("#btn-screen-1").click(function () {
+        $("#screen-1").show();
+		$("#screen-2,#screen-3,#screen-4").hide();
+		document.getElementById("pc-screen").scrollTop = 0;
+    });
+});		
 	
+$(document).ready(function(){
+    $("#btn-screen-2").click(function () {
+        $("#screen-2").show();
+		$("#screen-1,#screen-3,#screen-4").hide();
+		document.getElementById("pc-screen").scrollTop = 0;
+    });
+});		
+	
+$(document).ready(function(){
+    $("#btn-screen-3").click(function () {
+        $("#screen-3").show();
+		$("#screen-1,#screen-2,#screen-4").hide();
+		document.getElementById("pc-screen").scrollTop = 0;
+    });
+});
+	
+	
+$(document).ready(function(){
+    $("#btn-screen-4").click(function () {
+        $("#screen-4").show();
+		$("#screen-1,#screen-2,#screen-3").hide();
+		document.getElementById("pc-screen").scrollTop = 0;
+		
+    });
+});	
+</script>	
 	
 </html>
